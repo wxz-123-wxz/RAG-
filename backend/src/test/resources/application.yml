@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:ragqa;MODE=MySQL;DB_CLOSE_DELAY=-1;DATABASE_TO_LOWER=TRUE
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  flyway:
+    enabled: false
+
+app:
+  security:
+    jwt-secret: dGVzdC1vbmx5LXNlY3JldC10aGF0LWlzLWF0LWxlYXN0LTMyLWJ5dGVzLWxvbmc=
+    access-token-minutes: 15
+    refresh-token-days: 7
+    refresh-cookie-name: rag_qa_refresh
+    secure-cookie: false
+  cors:
+    allowed-origins: http://localhost:5173
+  bootstrap-admin:
+    username: admin
+    password:
+    display-name: 系统管理员
+
